@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Discord Token Login",
+  "version": "1.1.0",
+  "description": "Login to Discord using a token and copy your current token instantly.",
+  "permissions": ["storage", "clipboardWrite", "scripting", "activeTab"],
+  "host_permissions": ["*://*.discord.com/*"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "icons": {
+    "48": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.discord.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "discord-token-login@flxder.dev",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
+}

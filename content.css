@@ -1,0 +1,50 @@
+#dtl-copy-token-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999999;
+  background-color: #2f3136;
+  color: #ffffff;
+  border: 1px solid #202225;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#dtl-copy-token-btn:hover {
+  background-color: #40444b;
+  transform: translateY(-1px);
+}
+
+#dtl-copy-token-btn:active {
+  background-color: #202225;
+  transform: translateY(0);
+}
+
+#dtl-toast {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  z-index: 999999;
+  background-color: #43b581;
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-family: "Whitney", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+#dtl-toast.dtl-toast-show {
+  opacity: 1;
+  transform: translateY(0);
+}
